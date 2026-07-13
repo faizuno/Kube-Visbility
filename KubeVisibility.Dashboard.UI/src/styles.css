@@ -1,0 +1,296 @@
+/* Import theme CSS variables - must be first */
+@import './app/core/theme/theme.css';
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* Prevent default browser scaling */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: var(--theme-font-body);
+  line-height: 1.5;
+  background: var(--theme-bg-app);
+  /* Prevent text selection issues with scaling */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevent pull-to-refresh on mobile */
+  overscroll-behavior: none;
+}
+
+:root {
+  --primary-color: #007bff;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --info-color: #17a2b8;
+  --border-color: var(--theme-border-gray-light);
+  --bg-color: var(--theme-bg-app);
+  --text-color: var(--theme-text-dark);
+  --text-muted: var(--theme-text-gray);
+  
+  /* Base viewport dimensions (16:10 aspect ratio: 1920x1200) */
+  --base-viewport-width: 1920px;
+  --base-viewport-height: 100%;
+
+}
+
+/* Keep icon color consistent app-wide by icon type.
+   Local component state styles (e.g., health tones) can still override these. */
+i.fa-chart-line {
+  color: var(--theme-icon-overview);
+}
+
+i.fa-home {
+  color: var(--theme-icon-home);
+}
+
+i.fa-server {
+  color: var(--theme-icon-kubernetes);
+}
+
+i.fa-stream {
+  color: var(--theme-icon-kafka);
+}
+
+i.fa-cube {
+  color: var(--theme-icon-application);
+}
+
+i.fa-bell {
+  color: var(--theme-icon-alert);
+}
+
+i.fa-user {
+  color: #ffffff;
+}
+
+i.fa-sync-alt {
+  color: var(--theme-button-primary);
+}
+
+i.fa-redo {
+  color: #7e0000;
+}
+
+i.fa-play {
+  color: var(--success-color, #10b981);
+}
+
+i.fa-pause {
+  color: var(--warning-color, #f59e0b);
+}
+
+i.fa-stop {
+  color: var(--danger-color, #dc3545);
+}
+
+i.fa-rocket {
+  color: var(--theme-icon-metrics);
+}
+
+i.fa-edit,
+i.fa-pencil-alt {
+  color: var(--theme-button-primary);
+}
+
+i.fa-triangle-exclamation {
+  color: var(--theme-icon-error);
+}
+
+i.fa-search {
+  color: var(--theme-icon-search);
+}
+
+i.fa-copy {
+  color: var(--theme-icon-metrics);
+}
+
+i.fa-code-branch {
+  color: var(--theme-icon-error);
+}
+
+i.fa-info-circle {
+  color: var(--theme-icon-overview);
+}
+
+i.fa-briefcase,
+i.fa-box,
+i.fa-cubes {
+  color: var(--theme-icon-application);
+}
+
+i.fa-file-alt,
+i.fa-list {
+  color: var(--theme-icon-kubernetes);
+}
+
+i.fa-clock {
+  color: var(--theme-icon-metrics);
+}
+
+i.fa-clipboard-list {
+  color: var(--theme-icon-audit);
+}
+
+i.fa-cogs,
+i.fa-microchip,
+i.fa-memory,
+i.fa-heartbeat,
+i.fa-calendar-check {
+  color: var(--theme-icon-metrics);
+}
+
+/* Reusable dashboard table baseline (alerts look-and-feel).
+   Components can override via CSS variables or local selectors. */
+.dashboard-common-table-wrap {
+  border: 1px solid var(--theme-border-gray-light);
+  border-radius: 8px;
+  background: var(--theme-bg-surface);
+}
+
+.dashboard-common-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--dashboard-table-font-size, 0.84rem);
+}
+
+.dashboard-common-table th,
+.dashboard-common-table td {
+  text-align: left;
+  padding: var(--dashboard-table-cell-padding, 0.42rem 0.35rem);
+  border-bottom: 1px solid var(--theme-border-gray-light);
+  vertical-align: top;
+}
+
+.dashboard-common-table th {
+  color: var(--dashboard-table-header-color, var(--theme-table-header-color));
+  font-weight: var(--dashboard-table-header-weight, 700);
+  background: var(--dashboard-table-header-bg, var(--theme-table-header-bg));
+  border-bottom: 1px solid var(--theme-table-header-border);
+}
+
+.dashboard-common-table td {
+  color: var(--dashboard-table-body-color, var(--theme-table-body-color));
+}
+
+.dashboard-common-table tbody tr:hover {
+  background: var(--theme-bg-app);
+}
+
+/* Global modal baseline aligned with Global Logs modal */
+:is(
+  .modal-overlay > .modal-content,
+  .search-modal > .modal-content,
+  .topic-errors-modal > .modal-content,
+  .metrics-modal-overlay > .metrics-modal-content,
+  .suppression-modal,
+  .definition-modal,
+  .modal-container,
+  .modal.topics-list-modal,
+  .modal-container.full-message-modal
+) {
+  border-radius: 12px !important;
+  border: 1px solid var(--theme-border-gray-light) !important;
+  box-shadow: var(--theme-shadow-lg) !important;
+  overflow: hidden !important;
+}
+
+:is(
+  .modal-overlay > .modal-content > .modal-header,
+  .search-modal > .modal-content > .modal-header,
+  .topic-errors-modal > .modal-content > .modal-header,
+  .metrics-modal-overlay > .metrics-modal-content > .metrics-modal-header,
+  .suppression-modal > .modal-header,
+  .definition-modal > .modal-header,
+  .modal-container > .modal-header,
+  .modal.topics-list-modal > .modal-header,
+  .modal-container.full-message-modal > .modal-header
+) {
+  background: var(--theme-header-gradient) !important;
+  color: var(--theme-bg-surface) !important;
+  border-bottom: 1px solid var(--theme-border-teal-dark) !important;
+  box-shadow: var(--theme-shadow-md) !important;
+}
+
+/* Global table typography baseline */
+table thead th {
+  font-size: var(--theme-font-table-header) !important;
+  font-weight: var(--theme-font-table-header-weight) !important;
+  color: var(--theme-table-header-color) !important;
+  background: var(--theme-table-header-bg) !important;
+  border-bottom: 1px solid var(--theme-table-header-border) !important;
+}
+
+table th {
+  font-size: var(--theme-font-table-header) !important;
+  font-weight: var(--theme-font-table-header-weight) !important;
+  color: var(--theme-table-header-color) !important;
+}
+
+table thead th.sortable:hover,
+table th.sortable:hover {
+  background: var(--theme-table-header-bg-hover) !important;
+}
+
+table tbody td {
+  font-size: var(--theme-font-table-body) !important;
+  font-weight: var(--theme-font-table-body-weight);
+  color: var(--theme-table-body-color) !important;
+}
+
+table td {
+  font-size: var(--theme-font-table-body) !important;
+  color: var(--theme-table-body-color) !important;
+}
+
+/* Global title baseline for consistency */
+h1 {
+  font-size: var(--theme-font-page-title) !important;
+}
+
+h2,
+h3 {
+  font-size: var(--theme-font-section-title) !important;
+}
+
+/* Common app title variants */
+.section-title,
+.detail-title h2,
+.error-header h1,
+.audit-header h1,
+.nodes-header h1 {
+  font-size: var(--theme-font-page-title) !important;
+}
+
+.accordion-title,
+.chart-title,
+.modal-header-left h2,
+.filter-toggle-header h3,
+.detail-section h3,
+.section-toggle-btn,
+.container-header-detail {
+  font-size: var(--theme-font-section-title) !important;
+}
+
+/* Modal headers keep visual hierarchy but share sizing */
+.modal-header h2,
+.modal-header h3 {
+  font-size: var(--theme-font-section-title) !important;
+}

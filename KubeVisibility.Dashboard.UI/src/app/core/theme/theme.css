@@ -1,0 +1,115 @@
+/**
+ * CSS Custom Properties (Variables) for Theme Colors
+ * Import this file in your root component or global styles
+ * Use these variables in component styles: var(--theme-primary-teal)
+ */
+
+:root {
+  /* Primary Brand Purple (from logo gradient) */
+  --theme-primary-teal: #007bff;
+  --theme-primary-teal-dark: #0069d9;
+  --theme-primary-teal-light: #3395ff;
+  --theme-primary-teal-darker: #0056b3;
+
+  /* Header Gradient - Brand Purple */
+  --theme-header-gradient: linear-gradient(135deg, #0056b3 0%, #0069d9 52%, #007bff 100%);
+  --theme-header-gradient-start: #0056b3;
+  --theme-header-gradient-mid: #0069d9;
+  --theme-header-gradient-end: #007bff;
+
+  /* Button Colors */
+  --theme-button-primary: #007bff;
+  --theme-button-primary-hover: #0069d9;
+  --theme-button-primary-shadow: rgba(0, 123, 255, 0.32);
+  
+  /* Semantic Button Colors */
+  --theme-button-success: #10b981;
+  --theme-button-success-hover: #059669;
+  --theme-button-warning: #f59e0b;
+  --theme-button-warning-hover: #d97706;
+  --theme-button-danger: #ef4444;
+  --theme-button-danger-hover: #dc2626;
+
+  /* Background Colors */
+  --theme-bg-app: #fafaff;
+  --theme-bg-surface: #ffffff;
+  --theme-bg-teal-light: #f6eff7;
+  --theme-bg-teal-lighter: #f8f5f8;
+  --theme-bg-white: var(--theme-bg-surface);
+  --theme-bg-gray: #f5f5f5;
+  --theme-bg-gray-light: #f9fafb;
+  --theme-bg-overlay-backdrop: rgba(0, 0, 0, 0.5);
+  --theme-bg-overlay-light: rgba(255, 255, 255, 0.22);
+  --theme-bg-primary-soft: rgba(0, 123, 255, 0.08);
+  --theme-skeleton-base: #d7e2f0;
+  --theme-skeleton-highlight: #eef4fb;
+
+  /* Border Colors */
+  --theme-border-teal: #007bff;
+  --theme-border-teal-dark: #0069d9;
+  --theme-border-gray: #e5e7eb;
+  --theme-border-gray-light: #e2e8f0;
+
+  /* Text Colors */
+  --theme-text-teal: #007bff;
+  --theme-text-teal-dark: #0069d9;
+  --theme-text-gray: #6b7280;
+  --theme-text-gray-dark: #374151;
+  --theme-text-dark: #1e293b;
+
+  /* Typography Scale */
+  --theme-font-page-title: 1.4rem;
+  --theme-font-section-title: 1.1rem;
+  --theme-font-body: 0.875rem;
+  --theme-font-caption: 0.75rem;
+  --theme-font-table-header: 0.82rem;
+  --theme-font-table-body: 0.82rem;
+  --theme-font-table-header-weight: 700;
+  --theme-font-table-body-weight: 500;
+  --theme-table-header-color: #334155;
+  --theme-table-body-color: #1e293b;
+  --theme-table-header-bg: var(--theme-bg-gray-light);
+  --theme-table-header-bg-hover: var(--theme-bg-teal-lighter);
+  --theme-table-header-border: var(--theme-border-gray-light);
+
+  /* Badge Colors */
+  --theme-badge-teal: #e6f2ff;
+  --theme-badge-teal-text: #0069d9;
+
+  /* Status Colors */
+  --theme-status-healthy: #10b981;
+  --theme-status-warning: #f59e0b;
+  --theme-status-critical: #de680c;
+  --theme-status-processing: #007bff;
+
+  /* Global Icon Colors */
+  --theme-icon-overview: #007bff;
+  --theme-icon-kubernetes: #10b981;
+  --theme-icon-kafka: #a855f7;
+  --theme-icon-application: #06b6d4;
+  --theme-icon-alert: #f59e0b;
+  --theme-icon-metrics: #0ea5e9;
+  --theme-icon-error: #ef4444;
+  --theme-icon-search: #38bdf8;
+  --theme-icon-audit: #fbbf24;
+  --theme-icon-home: #cfd8ce;
+
+  /* Shadows */
+  --theme-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --theme-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --theme-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --theme-shadow-popover: 0 8px 20px rgba(0, 0, 0, 0.15);
+  --theme-shadow-popover-sm: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Global z-index scale */
+  --z-base: 1;
+  --z-sticky: 10;
+  --z-dropdown: 1200;
+  --z-header: 9000;
+  --z-header-popover: 9010;
+  --z-toast: 9020;
+  --z-modal-backdrop: 1000000;
+  --z-modal-content: 1000001;
+  --z-modal-popover: 1000002;
+}
+

@@ -1,0 +1,24 @@
+# Root ignore rules for Kube Visibility Dashboard
+
+# Local / secret overlays (keep real deploy configs out of git)
+**/appsettings.*.local.json
+**/appsettings.Production.json
+**/appsettings.QA.json
+**/appsettings.Stage.json
+**/appsettings.Load.json
+**/.env
+**/.env.*
+!**/.env.example
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.vs/
+.idea/
+
+# Build outputs (also covered by project gitignores)
+**/bin/
+**/obj/
+**/dist/
+**/node_modules/
+**/.angular/

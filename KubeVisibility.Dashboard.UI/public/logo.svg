@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kube Visibility">
+  <defs>
+    <linearGradient id="kv-grad" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#kv-grad)"/>
+  <path fill="#ffffff" d="M32 10l18 10v20L32 50 14 40V20L32 10zm0 6.2L18.8 23.5v16.9L32 47.8l13.2-7.4V23.5L32 16.2z"/>
+  <circle cx="32" cy="32" r="6.5" fill="#ffffff"/>
+  <path fill="#ffffff" opacity="0.85" d="M32 22.5v-5M41.2 27.3l4.3-2.5M41.2 36.7l4.3 2.5M32 41.5v5M22.8 36.7l-4.3 2.5M22.8 27.3l-4.3-2.5"/>
+</svg>

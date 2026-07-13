@@ -1,0 +1,148 @@
+# Build artifacts
+bin
+obj
+*.dll
+*.pdb
+*.exe
+*.cache
+
+# Version control
+.git
+.gitignore
+.gitattributes
+.gitmodules
+
+# IDE and editor files
+.vs
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+*.user
+*.userosscache
+*.sln.docstates
+
+# Documentation
+README.md
+*.md
+CHANGELOG.md
+LICENSE
+
+# Test files
+*Tests
+*Test
+*.Tests
+*.test.*
+*.spec.*
+TestResults
+[Tt]est[Rr]esult*
+[Bb]in
+[Oo]bj
+coverage
+*.coverage
+*.coveragexml
+
+# CI/CD files
+.github
+.gitlab-ci.yml
+Jenkinsfile
+.travis.yml
+.circleci
+azure-pipelines.yml
+*.yml
+!docker-compose*.yml
+
+# Environment files (use secrets management instead)
+.env
+.env.local
+.env.*.local
+appsettings.Development.json
+appsettings.Local.json
+# Keep appsettings.json and appsettings.QA.json for deployment
+
+# Logs
+*.log
+logs
+*.log.*
+
+# Temporary files
+*.tmp
+*.temp
+.tmp
+.temp
+*.cache
+*.suo
+*.user
+*.userosscache
+*.cache
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Docker files (don't include in build context)
+Dockerfile*
+.dockerignore
+docker-compose*.yml
+
+# OS files
+Thumbs.db
+.DS_Store
+*.swp
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider files
+.idea/
+*.sln.iml
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# NuGet packages (will be restored during build)
+packages/
+*.nupkg
+*.snupkg
+
+# Visual Studio cache/options
+.vs/
+.vscode/
+
